@@ -1,0 +1,241 @@
+/* Apply box-sizing rule to all elements for predictable sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Base body styles */
+body {
+    font-family: "Antonio", sans-serif; /* Use imported Antonio font */
+    color: #070707;                     /* Text color */
+    margin: 0 auto;                     /* Center the page with auto margins */
+    /* font-weight: 100; */              /* Font weight can be adjusted if needed */
+}
+
+/* ================
+   Typography 
+   ================ */
+
+/* Main heading styles */
+h1 {
+    font-size: 2.5rem;                  /* Base font size */
+    font-weight: 100;                   /* Light font weight */
+    text-shadow: 0 2px 0 #2229d4;        /* Text shadow for a 3D effect */
+    word-wrap: break-word;              /* Ensure words wrap properly */
+}
+
+/* Special styling for highlighted spans in headings and subheadings */
+.int-span,
+.subheading {
+    font-family: "Fredoka", sans-serif; /* Use Fredoka for contrast */
+    font-weight: bold;                  /* Bold text */
+    text-transform: uppercase;          /* Uppercase letters */
+}
+
+/* Secondary heading styles */
+h2 {
+    font-size: 2.25rem;
+    margin: 0.167em 0;                  /* Small vertical margin */
+}
+
+/* Paragraph styling */
+p {
+    font-size: 1.125rem;
+    line-height: 1.35;                  /* Adjust line spacing for readability */
+}
+
+/* Additional paragraph styling for the main text */
+.main-text {
+    font-family: "Fredoka", sans-serif;
+    font-weight: lighter;
+}
+
+/* Styling for beta text used in intro section */
+.beta-text {
+    font-weight: 900;
+}
+
+/* Styling for subheadings */
+.subheading {
+    color: #575757;
+    font-weight: 900;
+    margin-bottom: 0.5em;
+}
+
+/* Apply uppercase transformation to these elements */
+.beta-text,
+.top-text,
+.subheading {
+    text-transform: uppercase;
+}
+
+/* Top text style with border and spacing */
+.top-text {
+    font-size: 0.875rem;
+    font-weight: 900;
+    padding-top: 0.25em;
+    border-top: 5px solid;
+    order: -1;                          /* Adjust order if using flex layout */
+    margin: 0 auto;
+}
+
+/* Fine print for disclaimers */
+.fine-print {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: #858585;
+}
+
+/* ================
+   Flex Containers
+   ================ */
+
+/* Style for both the intro and main content sections */
+.intro,
+.main-content {
+    display: flex;
+    flex-direction: column;             /* Stack child elements vertically */
+    justify-content: center;            /* Center items vertically */
+    align-items: center;                /* Center items horizontally */
+    padding-left: 2em;
+    padding-right: 2em;
+}
+
+/* ================
+   Intro Section
+   ================ */
+
+/* Specific styles for the intro section */
+.intro {
+    justify-content: space-between;     /* Space elements evenly */
+    min-height: 250px;                  /* Minimum height for the section */
+    text-align: center;                 /* Center text horizontally */
+    color: white;                       /* Text color white for contrast with background */
+    background: #2e35f1 url("images/intro-bg.png"); /* Background color and image */
+    background-size: cover;             /* Cover entire section */
+    background-position: center;        /* Center the background image */
+    padding-bottom: 1.5em;
+}
+
+/* ================
+   Main Content Section
+   ================ */
+
+/* Styles for the main content area */
+.main-content {
+    align-items: center;                /* Center child elements */
+    padding-top: 2.5em;
+}
+
+/* Image styling to ensure responsiveness */
+.img-main {
+    max-width: 100%;                    /* Responsive width */
+    margin-bottom: 1.2rem;              /* Spacing below the image */
+}
+
+/* Limit width for paragraphs and forms within main content */
+.main-content p,
+form {
+    max-width: 450px;
+}
+
+/* ================
+   Form Styles
+   ================ */
+
+/* Base styles for input fields and buttons */
+input,
+button {
+    font-family: inherit;               /* Inherit font from parent */
+    width: 100%;                        /* Full width */
+    border-radius: 50px;                /* Rounded corners */
+}
+
+/* Specific styles for input fields */
+input {
+    padding: 0.5em 1em;                 /* Padding for better usability */
+    margin-bottom: 0.75em;              /* Spacing between inputs */
+    border: 2px solid #d1d5db;          /* Border styling */
+}
+
+/* Focus state for inputs for accessibility */
+input:focus {
+    outline: none;                     /* Remove default outline */
+    border-color: #2e35f1;              /* Change border color on focus */
+    background-color: #e6e8ec;          /* Change background for focus state */
+}
+
+/* Base button styles */
+.btn {
+    text-transform: uppercase;        /* Uppercase text */
+    font-weight: 900;
+    letter-spacing: 1px;
+    padding: 1em 0;
+    border: none;
+    cursor: pointer;                   /* Pointer cursor on hover */
+}
+
+/* Primary button specific styles */
+.btn-primary {
+    color: white;
+    background-color: #2e35f1;
+    margin-top: 1em;
+}
+
+/* Hover and focus states for primary button */
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: #7fc472;
+    color: #070707;
+}
+
+/* ================
+   Media Queries
+   ================ */
+
+/* Adjust layout for viewports wider than 576px */
+@media (min-width: 576px) {
+    body {
+        display: flex;                /* Enable flex for body layout */
+    }
+
+    h1 {
+        font-size: 5vw;               /* Responsive font size based on viewport width */
+        padding: 0 2em;
+    }
+
+    .int-span {
+        font-size: 1.2em;             /* Slightly larger font for highlighted text */
+    }
+
+    h2 {
+        font-size: 2.625rem;
+    }
+
+    .beta-text,
+    .top-text {
+        font-size: 1.25rem;
+    }
+
+    /* Set width for intro and main content sections for side-by-side layout */
+    .intro,
+    .main-content {
+        width: 50%;
+    }
+
+    .intro {
+        min-height: 100vh;           /* Full viewport height for the intro section */
+    }
+
+    /* Restrict the maximum width of the main image */
+    .img-main {
+        max-width: 50%;
+    }
+
+    /* Center main content vertically with no extra padding */
+    .main-content {
+        justify-content: center;
+        padding-top: 0;
+    }
+}
