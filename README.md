@@ -1,7 +1,10 @@
 # The Rhythm Revolution
 
-## Description
+[![Demo](https://github.com/user-attachments/assets/c212c142-3da3-453c-9141-729c24eab1f9)](https://funny-moonbeam-fb628f.netlify.app/)
 
+> Click the image to view the demo. The link will open in the current tab (press `Ctrl + Click` or `Cmd + Click` to open in a new tab).
+
+## Description
 The Rhythm Revolution is a responsive, web-based festival landing page designed to capture the energy and excitement of live music events. This project features a vibrant, modern design that seamlessly adapts to various devices and screen sizes. It invites users to explore live artistry through engaging visuals and a streamlined interface, all while promoting an immersive festival experience.
 
 ## Features
